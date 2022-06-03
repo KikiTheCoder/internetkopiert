@@ -6,6 +6,7 @@
   </div>
   <main class="container">
     <div class="title">Personenbeschreibung</div>
+    <button class="fancy-btn">Click me</button>
     <div class="content">
       Text Hier
     </div>
@@ -13,6 +14,22 @@
 </template>
 
 <style>
+.fancy-btn {
+  padding: 16px 14px;
+  color: #ffffff;
+  background: linear-gradient(to bottom right, rgb(156, 44, 167), rgb(79, 12, 204));
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  box-shadow: #888 -5px 5px 2px;
+}
+
+.fancy-btn:hover {
+  transform: translate3d(3px, -3px, 0px);
+  box-shadow: #888 -5px 5px 8px;
+}
+
 #preloader {
   height: 100vh;
   width: 100vw;
