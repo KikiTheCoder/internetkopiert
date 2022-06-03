@@ -11,4 +11,4 @@ RUN npm install
 COPY . .
 # build app for production with minification
 RUN npm run build
-CMD [ "http-server", "dist" ]
+CMD [ "http-server", "dist", "--port 8080", "-P http://localhost:8080?" ]
