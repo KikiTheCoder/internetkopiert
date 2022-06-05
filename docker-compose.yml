@@ -4,8 +4,8 @@ services:
     build: .
     labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.ausdeminternetkopiert.rule=Host(`demo.traefik.kiki`)"
-        - traefik.http.services.my-service.loadbalancer.server.port=8080
+        - "traefik.http.routers.ausdeminternetkopiert.rule=Host(`demo.traefik.kiki`, `test.traefik.kiki`)"
+        - "traefik.http.services.ausdeminternetkopiert.loadbalancer.server.port=8080"
     networks:
       - traefik_web
 
