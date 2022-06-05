@@ -2,3 +2,9 @@ version: '3'
 services:
   ausdeminternetkopiert:
     build: .
+  labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ausdeminternetkopiert.tls=true"
+      - "traefik.http.routers.ausdeminternetkopiert.tls.certresolver=le"
+      - "traefik.http.routers.ausdeminternetkopiert.rule=Host(`demo.traefik.kiki`)"
+      - "traefik.http.services.my_custom_image.loadbalancer.server.port=8080"
