@@ -8,6 +8,8 @@ services:
         - "traefik.http.services.ausdeminternetkopiert.loadbalancer.server.port=8080"
     networks:
       - traefik_web
+    deploy:
+      
 
 networks:
   traefik_web:
